@@ -1,0 +1,22 @@
+﻿<Window x:Class="ProjectDemo.Company_ManageJobs"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjectDemo"
+        mc:Ignorable="d"
+        Title="Company_ManageJobs"  Height="720" Width="1280" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/ProjectDemo;component/aaaaaaaaaaaaa.jpg"/>
+        </Grid.Background>
+        <Button x:Name="Logout" Content="Back" HorizontalAlignment="Left" Margin="1129,636,0,0" VerticalAlignment="Top" Width="111" Height="43" Click="Back_Click" RenderTransformOrigin="2.054,2.279"/>
+        <DataGrid x:Name="postedJobsDG" HorizontalAlignment="Left" Height="422" Margin="58,126,0,0" VerticalAlignment="Top" Width="288" Background="#FF53B6FA" Foreground="#DDFFFFFF" CanUserAddRows="False" FontSize="17" SelectionChanged="postedJobs_SelectionChanged" IsReadOnly="True" />
+        <Label Content="Posted Jobs" Margin="61,74,0,0" Width="207" FontSize="25" Height="65" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Button Content="View Details" HorizontalAlignment="Left" Margin="144,566,0,0" VerticalAlignment="Top" Width="144" Height="44" Click="viewJobDetalis_Click"/>
+        <DataGrid x:Name="appliedAppplicantDG" HorizontalAlignment="Left" Height="422" Margin="618,126,0,0" VerticalAlignment="Top" Width="288" Background="#FF53B6FA" Foreground="#DDFFFFFF" CanUserAddRows="False" FontSize="17" SelectionChanged="appliedAppplicantDG_SelectionChanged" IsReadOnly="True" />
+        <Label Content="Applied Applicant" Margin="621,74,0,0" Width="207" FontSize="25" Height="65" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Button Content="View Applicant" HorizontalAlignment="Left" Margin="704,566,0,0" VerticalAlignment="Top" Width="144" Height="44" Click="viewApplicant_Click"/>
+
+    </Grid>
+</Window>

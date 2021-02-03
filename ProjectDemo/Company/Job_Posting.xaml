@@ -1,0 +1,197 @@
+﻿<Window x:Class="ProjectDemo.Job_Posting"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjectDemo"
+        mc:Ignorable="d"
+        Title="Job_Posting" Height="720" Width="1280" WindowStartupLocation="CenterScreen">
+    <Grid Margin="0,-2,0,2">
+        <Grid.Background>
+            <ImageBrush ImageSource="/ProjectDemo;component/aaaaaaaaaaaaa.jpg"/>
+        </Grid.Background>
+        <TabControl HorizontalAlignment="Left" Height="689" VerticalAlignment="Top" Width="1272">
+            <TabItem Header="IT" HorizontalAlignment="Left" Width="399" Margin="-2,-2,-76,0" >
+                <Grid>
+                    <Grid.Background>
+                        <ImageBrush ImageSource="/ProjectDemo;component/aaaaaaaaaaaaa.jpg"/>
+                    </Grid.Background>
+                    <Label Content="Post Your Job" HorizontalAlignment="Left" Margin="451,36,0,0" VerticalAlignment="Top" Height="88" Width="344" FontSize="50" FontWeight="Bold"/>
+                    <Label Content="Job Type" HorizontalAlignment="Left" Margin="150,162,0,0" VerticalAlignment="Top" Width="102" Height="42" FontSize="20" Foreground="White"/>
+                    <Label Content=":" HorizontalAlignment="Left" Margin="293,162,0,0" VerticalAlignment="Top" FontSize="20" Height="42" Foreground="White"/>
+                    <Label Content="Job Title" HorizontalAlignment="Left" Margin="150,248,0,0" VerticalAlignment="Top" Width="102" Height="42" FontSize="20" Foreground="White"/>
+                    <TextBox x:Name="it_title" HorizontalAlignment="Left" Height="38" Margin="335,248,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="304" Background="{x:Null}" BorderBrush="#FF36E4DC" Foreground="White" FontSize="20"/>
+                    <Label Content=":" HorizontalAlignment="Left" Margin="293,248,0,0" VerticalAlignment="Top" FontSize="20" Height="42" Foreground="White"/>
+                    <Label Content="Experience" HorizontalAlignment="Left" Margin="150,289,0,0" VerticalAlignment="Top" Width="123" Height="42" FontSize="20" Foreground="White"/>
+                    <Label Content=":" HorizontalAlignment="Left" Margin="293,289,0,0" VerticalAlignment="Top" FontSize="20" Height="42" Foreground="White"/>
+                    <Label Content="Salary" HorizontalAlignment="Left" Margin="150,335,0,0" VerticalAlignment="Top" Width="102" Height="42" FontSize="20" Foreground="White"/>
+                    <TextBox x:Name="it_salary" HorizontalAlignment="Left" Height="38" Margin="335,335,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="304" Background="{x:Null}" BorderBrush="#FF36E4DC" Foreground="White" FontSize="20"/>
+                    <Label Content=":" HorizontalAlignment="Left" Margin="293,335,0,0" VerticalAlignment="Top" FontSize="20" Height="42" Foreground="White"/>
+                    <Label Content="Job description" HorizontalAlignment="Left" Margin="744,305,0,0" VerticalAlignment="Top" Width="164" Height="42" FontSize="20" Foreground="White"/>
+                    <TextBox x:Name="it_description" HorizontalAlignment="Left" Height="167" Margin="748,352,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="356" Background="{x:Null}" BorderBrush="#FF36E4DC" Foreground="White" FontSize="20"/>
+                    <Label Content=":" HorizontalAlignment="Left" Margin="886,305,0,0" VerticalAlignment="Top" FontSize="20" Height="42" Foreground="White"/>
+                    <Button Content="Post " HorizontalAlignment="Left" Margin="491,578,0,0" VerticalAlignment="Top" Width="108" Height="36" Click="cseJobPost_Click"/>
+                    <Button Content="Back" HorizontalAlignment="Left" Margin="626,578,0,0" VerticalAlignment="Top" Width="108" Height="36" Click="back_Click"/>
+                    <ComboBox x:Name="it_experience_Combo" HorizontalAlignment="Left" Margin="335,294,0,0" VerticalAlignment="Top" Width="301" Height="36" BorderBrush="#FF36E4DC">
+                        <ComboBoxItem Content="Fresher" HorizontalAlignment="Left" Width="255"/>
+                        <ComboBoxItem Content="1" HorizontalAlignment="Left" Width="255"/>
+                        <ComboBoxItem Content="3" HorizontalAlignment="Left" Width="255"/>
+                        <ComboBoxItem Content="5" HorizontalAlignment="Left" Width="255"/>
+                    </ComboBox>
+                    <RadioButton x:Name="it_full_Check" Content="Full-Time" HorizontalAlignment="Left" Margin="338,168,0,0" VerticalAlignment="Top" FontSize="17" Foreground="White"/>
+                    <RadioButton x:Name="it_half_Check" Content="Part-Time" HorizontalAlignment="Left" Margin="538,168,0,0" VerticalAlignment="Top" FontSize="17" Foreground="White"/>
+                    <Label Content="Vacancy" HorizontalAlignment="Left" Margin="150,382,0,0" VerticalAlignment="Top" Width="102" Height="42" FontSize="20" Foreground="White"/>
+                    <TextBox x:Name="it_vacancy" HorizontalAlignment="Left" Height="38" Margin="335,382,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="304" Background="{x:Null}" BorderBrush="#FF36E4DC" Foreground="White" FontSize="20"/>
+                    <Label Content=":" HorizontalAlignment="Left" Margin="293,382,0,0" VerticalAlignment="Top" FontSize="20" Height="42" Foreground="White"/>
+                    <Label Content="Location" HorizontalAlignment="Left" Margin="150,430,0,0" VerticalAlignment="Top" Width="102" Height="42" FontSize="20" Foreground="White"/>
+                    <Label Content=":" HorizontalAlignment="Left" Margin="293,430,0,0" VerticalAlignment="Top" FontSize="20" Height="42" Foreground="White"/>
+                    <CheckBox x:Name="cs_Check" Content="C#" HorizontalAlignment="Left" Margin="748,201,0,0" VerticalAlignment="Top" Height="26" Width="56" FontSize="17" Background="#FF673AB7" BorderBrush="#FF673AB7" Foreground="White"/>
+                    <CheckBox x:Name="java_Check" Content="Java" HorizontalAlignment="Left" Margin="846,201,0,0" VerticalAlignment="Top" Height="26" Width="66" FontSize="17" Foreground="White"/>
+                    <CheckBox x:Name="c_Check" Content="C" HorizontalAlignment="Left" Margin="942,201,0,0" VerticalAlignment="Top" Height="26" Width="42" FontSize="17" Foreground="White"/>
+                    <CheckBox x:Name="cpp_Check" Content="C++" HorizontalAlignment="Left" Margin="748,237,0,0" VerticalAlignment="Top" Height="28" Width="72" FontSize="17" Foreground="White"/>
+                    <CheckBox x:Name="ruby_Check" Content="Ruby" HorizontalAlignment="Left" Margin="846,237,0,0" VerticalAlignment="Top" Height="28" Width="76" FontSize="17" Foreground="White"/>
+                    <CheckBox x:Name="python_Check" Content="Python" HorizontalAlignment="Left" Margin="942,237,0,0" VerticalAlignment="Top" Height="28" Width="92" FontSize="17" Foreground="White"/>
+                    <CheckBox x:Name="php_Check" Content="PHP" HorizontalAlignment="Left" Margin="748,272,0,0" VerticalAlignment="Top" Height="27" Width="68" FontSize="17" Foreground="White"/>
+                    <CheckBox x:Name="html_Check" Content="HTML" HorizontalAlignment="Left" Margin="846,272,0,0" VerticalAlignment="Top" Height="27" Width="82" FontSize="17" Foreground="White"/>
+                    <CheckBox x:Name="javaScript_Check" Content="JavaScript" HorizontalAlignment="Left" Margin="942,272,0,0" VerticalAlignment="Top" Height="27" Width="114" FontSize="17" Foreground="White"/>
+                    <Label Content="Language Proficiency" HorizontalAlignment="Left" Margin="744,161,0,0" VerticalAlignment="Top" Width="202" Height="43" FontSize="20" Foreground="White"/>
+                    <Label Content="CGPA" HorizontalAlignment="Left" Margin="150,477,0,0" VerticalAlignment="Top" Width="102" Height="42" FontSize="20" Foreground="White"/>
+                    <TextBox x:Name="it_cgpa" HorizontalAlignment="Left" Height="38" Margin="335,477,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="304" Background="{x:Null}" BorderBrush="#FF36E4DC" Foreground="White" FontSize="20"/>
+                    <Label Content=":" HorizontalAlignment="Left" Margin="293,477,0,0" VerticalAlignment="Top" FontSize="20" Height="42" Foreground="White"/>
+                    <ComboBox x:Name="it_location_Combo" HorizontalAlignment="Left" Margin="335,438,0,0" VerticalAlignment="Top" Width="301" Height="36" BorderBrush="#FF36E4DC">
+                        <ComboBoxItem Content="Dhaka" HorizontalAlignment="Left" Width="255"/>
+                        <ComboBoxItem Content="Sylhet" HorizontalAlignment="Left" Width="255"/>
+                        <ComboBoxItem Content="Chittagong" HorizontalAlignment="Left" Width="255"/>
+                        <ComboBoxItem Content="Rajshahi" HorizontalAlignment="Left" Width="255"/>
+                        <ComboBoxItem Content="Rangpur" HorizontalAlignment="Left" Width="299"/>
+                    </ComboBox>
+                    <Label Content="Job ID" HorizontalAlignment="Left" Margin="150,205,0,0" VerticalAlignment="Top" Width="102" Height="42" FontSize="20" Foreground="White"/>
+                    <TextBox x:Name="it_id" HorizontalAlignment="Left" Height="38" Margin="430,205,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="209" Background="{x:Null}" BorderBrush="#FF36E4DC" Foreground="White" FontSize="20"/>
+                    <Label Content=":" HorizontalAlignment="Left" Margin="293,205,0,0" VerticalAlignment="Top" FontSize="20" Height="42" Foreground="White"/>
+                    <TextBox x:Name="it_id_Copy" HorizontalAlignment="Left" Height="38" Margin="338,205,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="92" Background="{x:Null}" BorderBrush="#FF36E4DC" Foreground="White" FontSize="16" IsReadOnly="True"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Engineering" HorizontalAlignment="Left" Width="401" Margin="36,-2,-36,0" Background="#FFE5E5E5">
+                <Grid>
+                    <Grid.Background>
+                        <ImageBrush ImageSource="/ProjectDemo;component/aaaaaaaaaaaaa.jpg"/>
+                    </Grid.Background>
+                    <Label Content="Post Your Job" HorizontalAlignment="Left" Margin="451,36,0,0" VerticalAlignment="Top" Height="88" Width="344" FontSize="50" FontWeight="Bold"/>
+                    <Label Content="Job Type" HorizontalAlignment="Left" Margin="150,162,0,0" VerticalAlignment="Top" Width="102" Height="42" FontSize="20" Foreground="White"/>
+                    <Label Content=":" HorizontalAlignment="Left" Margin="293,162,0,0" VerticalAlignment="Top" FontSize="20" Height="42" Foreground="White"/>
+                    <Label Content="Job Title" HorizontalAlignment="Left" Margin="150,248,0,0" VerticalAlignment="Top" Width="102" Height="42" FontSize="20" Foreground="White"/>
+                    <TextBox x:Name="eng_title" HorizontalAlignment="Left" Height="38" Margin="335,248,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="304" Background="{x:Null}" BorderBrush="#FF36E4DC" Foreground="White" FontSize="20"/>
+                    <Label Content=":" HorizontalAlignment="Left" Margin="293,248,0,0" VerticalAlignment="Top" FontSize="20" Height="42" Foreground="White"/>
+                    <Label Content="Experience" HorizontalAlignment="Left" Margin="150,289,0,0" VerticalAlignment="Top" Width="123" Height="42" FontSize="20" Foreground="White"/>
+                    <Label Content=":" HorizontalAlignment="Left" Margin="293,289,0,0" VerticalAlignment="Top" FontSize="20" Height="42" Foreground="White"/>
+                    <Label Content="Salary" HorizontalAlignment="Left" Margin="150,335,0,0" VerticalAlignment="Top" Width="102" Height="42" FontSize="20" Foreground="White"/>
+                    <TextBox x:Name="eng_salary" HorizontalAlignment="Left" Height="38" Margin="335,335,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="304" Background="{x:Null}" BorderBrush="#FF36E4DC" Foreground="White" FontSize="20"/>
+                    <Label Content=":" HorizontalAlignment="Left" Margin="293,335,0,0" VerticalAlignment="Top" FontSize="20" Height="42" Foreground="White"/>
+                    <Label Content="Job description" HorizontalAlignment="Left" Margin="744,305,0,0" VerticalAlignment="Top" Width="164" Height="42" FontSize="20" Foreground="White"/>
+                    <Label Content=":" HorizontalAlignment="Left" Margin="886,305,0,0" VerticalAlignment="Top" FontSize="20" Height="42" Foreground="White"/>
+                    <Button Content="Post " HorizontalAlignment="Left" Margin="491,578,0,0" VerticalAlignment="Top" Width="108" Height="36" Click="eeeJobPost_Click"/>
+                    <Button Content="Back" HorizontalAlignment="Left" Margin="626,578,0,0" VerticalAlignment="Top" Width="108" Height="36" Click="back_Click"/>
+                    <ComboBox x:Name="eng_experience_Combo" HorizontalAlignment="Left" Margin="335,294,0,0" VerticalAlignment="Top" Width="301" Height="36" BorderBrush="#FF36E4DC">
+                        <ComboBoxItem Content="Fresher" HorizontalAlignment="Left" Width="255"/>
+                        <ComboBoxItem Content="1" HorizontalAlignment="Left" Width="255"/>
+                        <ComboBoxItem Content="3" HorizontalAlignment="Left" Width="255"/>
+                        <ComboBoxItem Content="5" HorizontalAlignment="Left" Width="255"/>
+                    </ComboBox>
+                    <RadioButton x:Name="eng_full_Check" Content="Full-Time" HorizontalAlignment="Left" Margin="338,168,0,0" VerticalAlignment="Top" FontSize="17" Foreground="White"/>
+                    <RadioButton x:Name="eng_half_Check" Content="Part-Time" HorizontalAlignment="Left" Margin="538,168,0,0" VerticalAlignment="Top" FontSize="17" Foreground="White"/>
+                    <Label Content="Vacancy" HorizontalAlignment="Left" Margin="150,382,0,0" VerticalAlignment="Top" Width="102" Height="42" FontSize="20" Foreground="White"/>
+                    <TextBox x:Name="eng_vacancy" HorizontalAlignment="Left" Height="38" Margin="335,382,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="304" Background="{x:Null}" BorderBrush="#FF36E4DC" Foreground="White" FontSize="20"/>
+                    <Label Content=":" HorizontalAlignment="Left" Margin="293,382,0,0" VerticalAlignment="Top" FontSize="20" Height="42" Foreground="White"/>
+                    <Label Content="Location" HorizontalAlignment="Left" Margin="150,430,0,0" VerticalAlignment="Top" Width="102" Height="42" FontSize="20" Foreground="White"/>
+                    <Label Content=":" HorizontalAlignment="Left" Margin="293,430,0,0" VerticalAlignment="Top" FontSize="20" Height="42" Foreground="White"/>
+
+                    <Label Content="CGPA" HorizontalAlignment="Left" Margin="150,477,0,0" VerticalAlignment="Top" Width="102" Height="42" FontSize="20" Foreground="White"/>
+                    <TextBox x:Name="eng_cgpa" HorizontalAlignment="Left" Height="38" Margin="335,477,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="304" Background="{x:Null}" BorderBrush="#FF36E4DC" Foreground="White" FontSize="20"/>
+                    <Label Content=":" HorizontalAlignment="Left" Margin="293,477,0,0" VerticalAlignment="Top" FontSize="20" Height="42" Foreground="White"/>
+                    <Label Content="Skills" HorizontalAlignment="Left" Margin="752,138,0,0" VerticalAlignment="Top" Width="202" Height="43" FontSize="20" Foreground="White"/>
+                    <CheckBox x:Name="fitting_Check" Content="Fitting And Manufacturing" HorizontalAlignment="Left" Margin="748,178,0,0" VerticalAlignment="Top" Height="31" Width="236" FontSize="17" Background="#FF2E6CF5" BorderBrush="{x:Null}" Foreground="White"/>
+                    <CheckBox x:Name="sql_Check" Content="SQL" HorizontalAlignment="Left" Margin="922,246,0,0" VerticalAlignment="Top" Height="28" Width="76" FontSize="17" Foreground="White"/>
+                    <CheckBox x:Name="powerGeneration_Check" Content="Power Generation" HorizontalAlignment="Left" Margin="748,244,0,0" VerticalAlignment="Top" Height="28" Width="170" FontSize="17" Background="#FF2E6CF5" BorderBrush="{x:Null}" Foreground="White"/>
+                    <CheckBox x:Name="scripting_Check" Content="Scripting" HorizontalAlignment="Left" Margin="748,212,0,0" VerticalAlignment="Top" Height="27" Width="112" FontSize="17" Foreground="White"/>
+                    <CheckBox x:Name="certifiedELB_Check" Content="Certified ELB" HorizontalAlignment="Left" Margin="922,214,0,0" VerticalAlignment="Top" Height="27" Width="126" FontSize="17" RenderTransformOrigin="4.585,7.63" Foreground="White"/>
+                    <CheckBox x:Name="mechanicalActivities_Check" Content="Mechanical Activities" HorizontalAlignment="Left" Margin="748,273,0,0" VerticalAlignment="Top" Height="27" Width="204" FontSize="17" Foreground="White"/>
+                    <ComboBox x:Name="eng_location_Combo" HorizontalAlignment="Left" Margin="335,438,0,0" VerticalAlignment="Top" Width="301" Height="36" BorderBrush="#FF36E4DC">
+                        <ComboBoxItem Content="Dhaka" HorizontalAlignment="Left" Width="255"/>
+                        <ComboBoxItem Content="Sylhet" HorizontalAlignment="Left" Width="255"/>
+                        <ComboBoxItem Content="Chittagong" HorizontalAlignment="Left" Width="255"/>
+                        <ComboBoxItem Content="Rajshahi" HorizontalAlignment="Left" Width="255"/>
+                        <ComboBoxItem Content="Rangpur" HorizontalAlignment="Left" Width="299"/>
+                    </ComboBox>
+                    <TextBox x:Name="eng_description" HorizontalAlignment="Left" Height="167" Margin="748,352,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="356" Background="{x:Null}" BorderBrush="#FF36E4DC" Foreground="White" FontSize="20"/>
+                    <Label Content="Job ID" HorizontalAlignment="Left" Margin="150,205,0,0" VerticalAlignment="Top" Width="102" Height="42" FontSize="20" Foreground="White"/>
+                    <TextBox x:Name="eng_id" HorizontalAlignment="Left" Height="38" Margin="451,205,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="188" Background="{x:Null}" BorderBrush="#FF36E4DC" Foreground="White" FontSize="20"/>
+                    <Label Content=":" HorizontalAlignment="Left" Margin="293,205,0,0" VerticalAlignment="Top" FontSize="20" Height="42" Foreground="White"/>
+                    <TextBox x:Name="it_id_Copy1" HorizontalAlignment="Left" Height="38" Margin="338,205,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="92" Background="{x:Null}" BorderBrush="#FF36E4DC" Foreground="White" FontSize="16" IsReadOnly="True"/>
+
+                </Grid>
+            </TabItem>
+            <TabItem Header="Marketing" Margin="70,-2,-230,0">
+                <Grid>
+                    <Grid.Background>
+                        <ImageBrush ImageSource="/ProjectDemo;component/aaaaaaaaaaaaa.jpg"/>
+                    </Grid.Background>
+
+                    <Label Content="Post Your Job" HorizontalAlignment="Left" Margin="451,36,0,0" VerticalAlignment="Top" Height="88" Width="344" FontSize="50" FontWeight="Bold"/>
+                    <Label Content="Job Type" HorizontalAlignment="Left" Margin="150,162,0,0" VerticalAlignment="Top" Width="102" Height="42" FontSize="20" Foreground="White"/>
+                    <Label Content=":" HorizontalAlignment="Left" Margin="293,162,0,0" VerticalAlignment="Top" FontSize="20" Height="42" Foreground="White"/>
+                    <Label Content="Job Title" HorizontalAlignment="Left" Margin="150,248,0,0" VerticalAlignment="Top" Width="102" Height="42" FontSize="20" Foreground="White"/>
+                    <TextBox x:Name="mark_title" HorizontalAlignment="Left" Height="38" Margin="335,248,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="304" Background="{x:Null}" BorderBrush="#FF36E4DC" Foreground="White" FontSize="20"/>
+                    <Label Content=":" HorizontalAlignment="Left" Margin="293,248,0,0" VerticalAlignment="Top" FontSize="20" Height="42" Foreground="White"/>
+                    <Label Content="Experience" HorizontalAlignment="Left" Margin="150,289,0,0" VerticalAlignment="Top" Width="123" Height="42" FontSize="20" Foreground="White"/>
+                    <Label Content=":" HorizontalAlignment="Left" Margin="293,289,0,0" VerticalAlignment="Top" FontSize="20" Height="42" Foreground="White"/>
+                    <Label Content="Salary" HorizontalAlignment="Left" Margin="150,335,0,0" VerticalAlignment="Top" Width="102" Height="42" FontSize="20" Foreground="White"/>
+                    <TextBox x:Name="mark_salary" HorizontalAlignment="Left" Height="38" Margin="335,335,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="304" Background="{x:Null}" BorderBrush="#FF36E4DC" Foreground="White" FontSize="20"/>
+                    <Label Content=":" HorizontalAlignment="Left" Margin="293,335,0,0" VerticalAlignment="Top" FontSize="20" Height="42" Foreground="White"/>
+                    <Label Content="Job description" HorizontalAlignment="Left" Margin="744,305,0,0" VerticalAlignment="Top" Width="164" Height="42" FontSize="20" Foreground="White"/>
+                    <TextBox x:Name="mark_description" HorizontalAlignment="Left" Height="167" Margin="748,352,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="356" Background="{x:Null}" BorderBrush="#FF36E4DC" Foreground="White" FontSize="20"/>
+                    <Label Content=":" HorizontalAlignment="Left" Margin="886,305,0,0" VerticalAlignment="Top" FontSize="20" Height="42" Foreground="White"/>
+                    <Button Content="Post " HorizontalAlignment="Left" Margin="491,578,0,0" VerticalAlignment="Top" Width="108" Height="36" Click="bbaJobPost_Click"/>
+                    <Button Content="Back" HorizontalAlignment="Left" Margin="626,578,0,0" VerticalAlignment="Top" Width="108" Height="36" Click="back_Click"/>
+                    <ComboBox x:Name="mark_experience_Combo" HorizontalAlignment="Left" Margin="335,294,0,0" VerticalAlignment="Top" Width="301" Height="36" BorderBrush="#FF36E4DC">
+                        <ComboBoxItem Content="Fresher" HorizontalAlignment="Left" Width="255"/>
+                        <ComboBoxItem Content="1" HorizontalAlignment="Left" Width="255"/>
+                        <ComboBoxItem Content="3" HorizontalAlignment="Left" Width="255"/>
+                        <ComboBoxItem Content="5" HorizontalAlignment="Left" Width="255"/>
+                    </ComboBox>
+                    <RadioButton x:Name="mark_full_Check" Content="Full-Time" HorizontalAlignment="Left" Margin="338,168,0,0" VerticalAlignment="Top" FontSize="17" Foreground="White"/>
+                    <RadioButton x:Name="mark_half_Check" Content="Part-Time" HorizontalAlignment="Left" Margin="538,168,0,0" VerticalAlignment="Top" FontSize="17" Foreground="White"/>
+                    <Label Content="Vacancy" HorizontalAlignment="Left" Margin="150,382,0,0" VerticalAlignment="Top" Width="102" Height="42" FontSize="20" Foreground="White"/>
+                    <TextBox x:Name="mark_vacancy" HorizontalAlignment="Left" Height="38" Margin="335,382,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="304" Background="{x:Null}" BorderBrush="#FF36E4DC" Foreground="White" FontSize="20"/>
+                    <Label Content=":" HorizontalAlignment="Left" Margin="293,382,0,0" VerticalAlignment="Top" FontSize="20" Height="42" Foreground="White"/>
+                    <Label Content="Location" HorizontalAlignment="Left" Margin="150,430,0,0" VerticalAlignment="Top" Width="102" Height="42" FontSize="20" Foreground="White"/>
+                    <Label Content=":" HorizontalAlignment="Left" Margin="293,430,0,0" VerticalAlignment="Top" FontSize="20" Height="42" Foreground="White"/>
+
+                    <Label Content="CGPA" HorizontalAlignment="Left" Margin="150,477,0,0" VerticalAlignment="Top" Width="102" Height="42" FontSize="20" Foreground="White"/>
+                    <TextBox x:Name="mark_cgpa" HorizontalAlignment="Left" Height="38" Margin="335,477,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="304" Background="{x:Null}" BorderBrush="#FF36E4DC" Foreground="White" FontSize="20"/>
+                    <Label Content=":" HorizontalAlignment="Left" Margin="293,477,0,0" VerticalAlignment="Top" FontSize="20" Height="42" Foreground="White"/>
+                    <Label Content="Skills" HorizontalAlignment="Left" Margin="745,118,0,0" VerticalAlignment="Top" Width="202" Height="43" FontSize="20" Foreground="White"/>
+                    <CheckBox x:Name="communication__Check" Content="Communication skills" HorizontalAlignment="Left" Margin="744,279,0,0" VerticalAlignment="Top" Height="31" Width="235" FontSize="17" Background="#FF2E6CF5" BorderBrush="{x:Null}" Foreground="White"/>
+                    <CheckBox x:Name="agencyManagement_Check" Content="Agency Management" HorizontalAlignment="Left" Margin="938,194,0,0" VerticalAlignment="Top" Height="28" Width="188" FontSize="17" Foreground="White"/>
+                    <CheckBox x:Name="marketResearch_Check" Content="Market Research" HorizontalAlignment="Left" Margin="938,164,0,0" VerticalAlignment="Top" Height="28" Width="169" FontSize="17" Background="#FF2E6CF5" BorderBrush="{x:Null}" Foreground="White"/>
+                    <CheckBox x:Name="corporateMarketing_Check" Content="Corporate Marketing" HorizontalAlignment="Left" Margin="744,192,0,0" VerticalAlignment="Top" Height="27" Width="188" FontSize="17" Foreground="White"/>
+                    <CheckBox x:Name="powerPoint_Check" Content="MS Word, Excel, PowerPoint" HorizontalAlignment="Left" Margin="744,253,0,0" VerticalAlignment="Top" Height="27" Width="235" FontSize="17" Foreground="White"/>
+                    <CheckBox x:Name="digitalMarketing_Check" Content="Digital Marketing" HorizontalAlignment="Left" Margin="744,165,0,0" VerticalAlignment="Top" Height="27" Width="188" FontSize="17" RenderTransformOrigin="4.585,7.63" Foreground="White"/>
+                    <CheckBox x:Name="promotionalActivities_Check" Content="Promotional Activities" HorizontalAlignment="Left" Margin="744,221,0,0" VerticalAlignment="Top" Height="27" Width="188" FontSize="17" Foreground="White"/>
+                    <ComboBox x:Name="mark_location_Combo" HorizontalAlignment="Left" Margin="335,438,0,0" VerticalAlignment="Top" Width="301" Height="36" BorderBrush="#FF36E4DC">
+                        <ComboBoxItem Content="Dhaka" HorizontalAlignment="Left" Width="255"/>
+                        <ComboBoxItem Content="Sylhet" HorizontalAlignment="Left" Width="255"/>
+                        <ComboBoxItem Content="Chittagong" HorizontalAlignment="Left" Width="255"/>
+                        <ComboBoxItem Content="Rajshahi" HorizontalAlignment="Left" Width="255"/>
+                        <ComboBoxItem Content="Rangpur" HorizontalAlignment="Left" Width="299"/>
+                    </ComboBox>
+                    <Label Content="Job ID" HorizontalAlignment="Left" Margin="150,205,0,0" VerticalAlignment="Top" Width="102" Height="42" FontSize="20" Foreground="White"/>
+                    <TextBox x:Name="mark_id" HorizontalAlignment="Left" Height="38" Margin="451,205,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="188" Background="{x:Null}" BorderBrush="#FF36E4DC" Foreground="White" FontSize="20"/>
+                    <Label Content=":" HorizontalAlignment="Left" Margin="293,205,0,0" VerticalAlignment="Top" FontSize="20" Height="42" Foreground="White"/>
+                    <TextBox x:Name="it_id_Copy2" HorizontalAlignment="Left" Height="38" Margin="338,205,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="92" Background="{x:Null}" BorderBrush="#FF36E4DC" Foreground="White" FontSize="16" IsReadOnly="True"/>
+
+                </Grid>
+            </TabItem>
+        </TabControl>
+
+    </Grid>
+</Window>
